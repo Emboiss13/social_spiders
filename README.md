@@ -146,3 +146,8 @@ rm -f /opt/homebrew/var/run/httpd*.pid
 $ python3 -m venv venv
 $ pip install gliner transformers
 ```
+
+---
+---
+
+Original git env: [link](https://git.cardiff.ac.uk/c22005835/social-spiders)
