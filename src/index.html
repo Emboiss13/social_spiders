@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta property="og:title" content="Social Spider's" />
+<meta property="og:url" content="http://www.socialspiders.co.uk" />
+<meta property="og:image" content="http://www.socialspiders.co.uk/socialspiders.png" />
+<meta property="og:site_name" content="Social Spider's" />
+<meta property="og:description" content="A site for exposing PII in your social media accounts" />
+
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="auther" content="Matthew Purvis">
+<title>Social Spiders</title>
+
+<link rel="stylesheet" href="index-style.css">
+<link rel="stylesheet" href="base.css">
+
+</head>
+<body onload="error_detection();">
+<script>
+//toggles hamburger animation on and off
+document.addEventListener('click', function dropdown(event) {
+    //toggles dropdown if icon directly clicked on
+    if (document.getElementById("menu").contains(event.target)){
+        document.getElementById("dropdown").classList.toggle("is-active");
+        document.getElementById("myDropdown").classList.toggle("show");
+        document.getElementById("navbar").classList.toggle("navbar-shadow");
+
+    //hides dropdown if open and user clicks anywhere else on the page
+    } else if (!document.getElementById("menu").contains(event.target) &&
+    document.getElementById("dropdown").classList.contains("is-active")) {
+        document.getElementById("dropdown").classList.remove("is-active");
+        document.getElementById("myDropdown").classList.remove("show");
+        document.getElementById("navbar").classList.add("navbar-shadow");
+    }
+});
+
+//error detection displays error if user has been redirected back to home page due to internal fault
+function error_detection() {
+    //displayed if user attempts to go directly to order_scan or callback scripts without first selecting a platform
+    if (window.location.search.substr(1) == "error=1") {
+        document.getElementById("error").style.display = "block";
+        document.getElementById("error").innerText = "No short cuts, make sure to select a platform to scan first!";
+
+    //displays error if Oauth fails
+    } else if (window.location.search.substr(1) == "error=2") {
+        document.getElementById("error").style.display = "block";
+        document.getElementById("error").innerText = "Looks like an authentication error, make sure to agree to all access controls when prompted!";
+
+    //displays error if an error occurs when attempting to fetch users posts
+    } else if (window.location.search.substr(1) == "error=3") {
+        document.getElementById("error").style.display = "block";
+        document.getElementById("error").innerText = "Oh no there was a hiccup fetching your posts, please try again later!";
+
+    //if no error code is passed the error code display box is hidden from view
+    } else {
+        document.getElementById("error").style.display = "none";
+    }
+}
+
+</script>
+<div id="navbar" class="navbar navbar-shadow">
+    <a class="logo" href="#home"></a>
+
+    <div id="menu" class="dropdown">
+        <button id="dropdown" class="hamburger hamburger--slider" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+
+    <img class="spider" src="spider.jpeg" alt="spider">
+</div>
+
+<div id="myDropdown" class="dropdown-content">
+    <a href="#navbar">Home</a>
+    <a href="#order-scan">Start Scan</a>
+    <a href="#info">Info</a>
+    <a href="#privacy-policy">Privacy Policy</a>
+</div>
+
+<div id="order-scan" class="order-scan">
+    <div class="error-message">
+        <p id="error" class="error"></p>
+    </div>
+
+    <form action="order_scan.php" method="post">
+        <div class="col">
+            <button name="platform" type="submit" value="Facebook" class="fb btn">Start a Facebook scan</button>
+            <button name="platform" type="submit" value="Instagram" class="Instagram btn">Start an Instagram scan</button>
+        </div>
+
+        <div class="col">
+            <button name="platform" type="submit" value="twitter" class="twitter btn">Start an X scan</button>
+            <button name="platform" type="submit" value="dummy" class="dummy btn">Start a Dummy Scan</button>
+        </div>
+    </form>
+</div>
+
+<div class="text" id="info">
+    <h1>
+        What is Personally Identifiable Information?
+    </h1>
+    <p>
+        Personally Identifiable Information is any data that can be used to identify an individual, including names, dates of birth, addresses, contact details, identification numbers, or financial information. This data is commonly used by banks and other institutions to identify customers, but is often inadvertently exposed in a user's social media posts. Financial fraudsters can leverage this data to bypass security checks and gain access to mobile banking services, giving scammers unfettered access to a user's account. To avoid becoming the victim of such fraud, users should take particular care when making posts online. Social Spiders can help to indicate where Personally Identifiable Information has previously been exposed on a user's social media.
+    </p>
+    <br>
+    <h1>Dummy Scan</h1>
+    <p>
+        A dummy scan is a scan done on the Social Spiders Twitter account, simulating a private social media account. It shows the different types of personal data can be exposed in your social media and how it can be found in some obscure places.
+        <br><br> Be sure to have a look at all the posts to see which ones do have personal information in it and which ones don't.
+    </p>
+    <br>
+    <h1>
+        Start a scan
+    </h1>
+    <p>
+        To start a scan on your account:
+        <ol>
+            <li>Hit the button for the platform your account is on above.</li>
+            <li>Login to the account you want to scan if prompted.</li>
+            <li>Grant permissions for us to be able to read your posts.</li>
+            <li>See how secure you really are.</li>
+        </ol>
+    </p>
+    <br>
+    <h1>
+        What to do with the result
+    </h1>
+    <p>
+        Have a think about which posts are flagged, consider who can see it and what they can do with that information. If any of the posts flags exposes personal information to people you do not want accessing it we highly suggest you remove the post.
+        <br><br> We also suggest you have a look at the other posts which are not flagged, there are some things we are unable to scan for, so make sure to double check any pictures.
+    </p>
+    <br>
+    <h1>
+        Privacy policy
+    </h1>
+    <p>
+        We do not store any data, once you leave the results page all the posts we have gathered are gone to the eather.
+    </p>
+</div>
+
+<div class="footer"></div>
+
+</body>
+</html>

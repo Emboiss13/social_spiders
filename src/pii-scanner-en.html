@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="es" href="/es/">
+    <title>PII Scanner</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <header class="site-header" id="home">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a class="brand" href="#home">
+                <img class="brand__logo" src="assets/logo-placeholder.png" alt="The Social Spider logo, a spider with a keyhole silhouette inside a shield.">
+                <span class="brand__text">Social<br>Spiders</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-controls="nav-panel" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+            </button>
+
+            <div class="nav-panel" id="nav-panel">
+                <ul class="nav-links">
+                    <li><a href="home-en.html" aria-current="page">Home</a></li>
+                    <li><a class="is-active" href="#pii-scanner">PII Scanner</a></li>
+                    <li><a href="home-en.html">Objectives</a></li>
+                    <li><a href="home-en.html">About Us</a></li>
+                    <li><a href="home-en.html">Privacy</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-languages">
+                    <a href="pii-scanner-en.html" aria-label="English">
+                        <img src="assets/flag-english.png" alt="Flag of the United Kingdom">
+                    </a>
+                    <a href="pii-scanner-sp.html" aria-label="Spanish">
+                        <img src="assets/flag-mexican.png" alt="Flag of Mexico">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="scanner-slogan" id="scanner-slogan" aria-labelledby="scanner-slogan-title">
+            <div class="scanner-slogan__inner">
+                <div class="scanner-slogan__hero">
+                    <div class="scanner-slogan__copy">
+                        <div class="scanner-slogan__heading">
+                            <h1 class="site-h1 scanner-slogan__title" id="scanner-slogan-title">PII Scanner</h1>
+                            <div class="scanner-slogan__visual">
+                                <img src="assets/pii-scanner-hero-placeholder.png" alt="Graphic of three arcs representing a scanner" aria-hidden="true">
+                            </div>
+                        </div>
+
+                        <p class="site-body scanner-slogan__subtitle">Personal Identifiable Information Scanner</p>
+                    </div>
+                </div>
+
+                <div class="scanner-slogan__actions" aria-label="Choose a social platform">
+                    <form class="scanner-slogan__form" action="order_scan.php" method="post" data-confirm-form>
+                        <input type="hidden" name="lang" value="en">
+                        <button type="submit" name="platform" value="Facebook" class="button__cta scanner-slogan__button">Facebook</button>
+                        <button type="submit" name="platform" value="Instagram" class="button__cta scanner-slogan__button">Instagram</button>
+                        <button type="submit" name="platform" value="twitter" class="button__cta scanner-slogan__button">X (Formally Twitter)</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="permission-modal" id="permission-modal-en" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="permission-modal-en-title">
+            <div class="permission-modal__backdrop" data-modal-close></div>
+            <div class="permission-modal__panel" role="document">
+                <div class="permission-modal__header">
+                    <h2 class="permission-modal__title" id="permission-modal-en-title">Data Access Permission Request</h2>
+                    <button class="permission-modal__close" type="button" aria-label="Close permission request" data-modal-close>
+                        <img src="assets/icon-close.png" alt="Close Icon" aria-hidden="true">
+                    </button>
+                </div>
+
+                <div class="permission-modal__body">
+                    <p class="site-body permission-modal__copy">
+                        You will now be <strong>redirected</strong> to a new page and asked to <strong>log in to your account</strong>.
+                    </p>
+                    <p class="site-body permission-modal__copy">
+                        Once you have logged in, you will be asked to <strong>give us access to your account data.</strong> Please <strong>accept and continue</strong> so we can start the scanning process.
+                    </p>
+                    <p class="site-body permission-modal__copy">
+                        For reassurance, <strong>we will not store or hold your data in any way</strong> and <strong>your data is automatically deleted as soon as you finish the scanning process.</strong>
+                    </p>
+                    <button class="button__cta permission-modal__confirm" type="button" data-modal-confirm>Continue</button>
+                </div>
+            </div>
+        </div>
+        
+        <section>
+            <div class="image_divider">
+                <img src="assets/pii-image-divider.png" alt="Picture of a person holding a credit card while using a laptop" aria-hidden="true">
+            </div>
+        </section>
+
+        <section class="pii-explainer" id="pii-explainer" aria-labelledby="pii-explainer-title">
+            <div class="pii-explainer__inner">
+                <div class="pii-explainer__content">
+                    <h2 class="site-h1 pii-explainer__title" id="pii-explainer-title">
+                        What Is Personal Identifiable Information?
+                    </h2>
+
+                    <p class="site-body pii-explainer__intro">
+                        Any data that can be used to identify an individual...
+                    </p>
+
+                    <div class="pii-explainer__copy">
+                        <p class="site-body pii-explainer__paragraph">
+                            This includes <strong>names, dates of birth, addresses, contact details, identification numbers, or financial information.</strong>
+                            This data is <strong>commonly used by banks</strong> and other institutions to identify customers, but is often inadvertently exposed in a user's social media posts.
+                        </p>
+
+                        <p class="site-body pii-explainer__paragraph">
+                            <strong>Financial fraudsters</strong> can leverage this data to <strong>bypass security checks</strong> and <strong>gain access</strong> to mobile banking services, giving scammers unfettered access to a user's account.
+                        </p>
+
+                        <p class="site-body pii-explainer__paragraph">
+                            To <strong>avoid becoming the victim of such fraud,</strong> users should take particular care when <strong>making posts online.</strong>
+                            Social Spiders can help to indicate where Personally Identifiable Information has previously been exposed on a user's social media.
+                        </p>
+                    </div>
+
+                    <a class="button__cta" href="#scanner-slogan">Get started</a>
+
+                </div>
+
+                <div class="pii-explainer__visual">
+                    <img src="assets/pii-explainer-placeholder.png" alt="Illustration of a hooded hacker behind a laptop with a large question mark above" aria-hidden="true">
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer" id="contact-us">
+            <div class="site-footer__backdrop"></div>
+            <div class="site-footer__panel">
+                <div class="site-footer__grid">
+                    <div class="site-footer__brand">
+                        <a class="site-footer__brand-link" href="#home">
+                            <img class="site-footer__logo" src="assets/footer-logo-placeholder.png" alt=" A spider silhouette with a keyhole in its center.">
+                            <span class="site-footer__brand-text">Social<br>Spiders</span>
+                        </a>
+                        <p class="site-footer__tagline">Where social privacy meets security</p>
+
+                        <div class="site-footer__socials" aria-label="Social links">
+                            <a href="#linkedin" aria-label="LinkedIn">
+                                <img src="assets/icon-linkedin.png" alt="LinkedIn icon" aria-hidden="true">
+                            </a>
+                            <a href="#instagram" aria-label="Instagram">
+                                <img src="assets/icon-instagram.png" alt="Instagram icon" aria-hidden="true">
+                            </a>
+                            <a href="#facebook" aria-label="Facebook">
+                                <img src="assets/icon-facebook.png" alt="Facebook icon" aria-hidden="true">
+                            </a>
+                            <a href="#twitter" aria-label="X (formally Twitter)">
+                                <img src="assets/icon-x.png" alt="X, formerly Twitter, icon" aria-hidden="true">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__heading">Our Services</h2>
+                        <ul class="site-footer__list">
+                            <li><a href="#financial-security">Financial Security</a></li>
+                            <li><a href="#pii-scanner">Social Media Scanner</a></li>
+                            <li><a href="#personal-security">Personal Security</a></li>
+                            <li><a href="#data-security">Data Security</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__heading">Page</h2>
+                        <ul class="site-footer__list">
+                            <li><a href="#about-us">About Us</a></li>
+                            <li><a href="#our-team">Our Team</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#our-blog">Our Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__heading">Contact Us</h2>
+                        <ul class="site-footer__contact-list">
+                            <li>
+                                <img src="assets/icon-phone.png" alt="Phone number icon" aria-hidden="true">
+                                <span>+44 1929 2102</span>
+                            </li>
+                            <li>
+                                <img src="assets/icon-email.png" alt="Email address icon" aria-hidden="true">
+                                <span>info@socialspiders.co.uk</span>
+                            </li>
+                            <li>
+                                <img src="assets/icon-location.png" alt="Location pin icon" aria-hidden="true">
+                                <span>Cardiff, Wales, UK</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__heading">Links</h2>
+                        <ul class="site-footer__list">
+                            <li><a href="#terms">Term Of Use</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="site-footer__divider"></div>
+                <p class="site-footer__copyright">copyright social spiders @2026 all right reserved</p>
+            </div>
+        </footer>
+    </main>
+    <script src="logic.js"></script>
+</body>
+</html>

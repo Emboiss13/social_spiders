@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="es" href="/es/">
+    <title>PII Scanner - Results</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="results-style.css">
+</head>
+<body>
+    <header class="site-header" id="home">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a class="brand" href="#home">
+                <img class="brand__logo" src="assets/logo-placeholder.png" alt="The Social Spider  logo, a spider with a keyhole silhouette inside a shield">
+                <span class="brand__text">Social<br>Spiders</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-controls="nav-panel" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+            </button>
+
+            <div class="nav-panel" id="nav-panel">
+                <ul class="nav-links">
+                    <li><a href="home-en.html" aria-current="page">Home</a></li>
+                    <li><a class="is-active" href="#pii-scanner">PII Scanner</a></li>
+                    <li><a href="home-en.html">Objectives</a></li>
+                    <li><a href="home-en.html">About Us</a></li>
+                    <li><a href="home-en.html">Privacy</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-languages">
+                    <a href="scanner-results-en.html" aria-label="English">
+                        <img src="assets/flag-english.png" alt="Flag of the United Kingdom">
+                    </a>
+                    <a href="scanner-results-sp.html" aria-label="Spanish">
+                        <img src="assets/flag-mexican.png" alt="Flag of Mexico">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="scanner-results" aria-labelledby="scanner-results-title">
+            <div class="scanner-results__inner">
+                <div class="scanner-results__overview">
+                    <div class="scanner-results__profile-placeholder" role="img" aria-label="Profile image placeholder">
+                        <img
+                            class="scanner-results__profile-image"
+                            src="assets/profile-placeholder.png"
+                            alt="Generic user profile icon"
+                        >
+                    </div>
+
+                    <div class="scanner-results__summary">
+                        <h1 class="scanner-results__title" id="scanner-results-title">Hey Mike!</h1>
+                        <p class="scanner-results__subtitle">What <strong>Facebook</strong> Says About You...</p>
+                        <p class="scanner-results__description">
+                            Overall your <strong>score is not looking good</strong>. We uncovered that you have shared personal identifiable information
+                            <strong>multiple times</strong> throughout your social media. The issues that <strong>stand out the most</strong> are
+                            direct identifiers such as your <strong>address, phone number and full name</strong>.
+                        </p>
+                    </div>
+
+                    <aside class="result-chart" aria-labelledby="result-chart-title">
+                        <div class="result-chart__donut" aria-hidden="true"></div>
+
+                        <div class="result-chart__legend">
+                            <h2 class="result-chart__title" id="result-chart-title">Overall Score</h2>
+                            <span class="result-chart__legend-item" tabindex="0">
+                                <span class="result-chart__swatch result-chart__swatch--level-one"></span>
+                                <span>PII - Level 1</span>
+                                <span class="result-chart__tooltip">High-risk personal data that can directly identify or locate you, such as your full name, address or phone number.</span>
+                            </span>
+                            <span class="result-chart__legend-item" tabindex="0">
+                                <span class="result-chart__swatch result-chart__swatch--level-two"></span>
+                                <span>PII - Level 2</span>
+                                <span class="result-chart__tooltip">Contextual personal data that can help someone guess security answers or profile you, such as school, workplace or pet names.</span>
+                            </span>
+                            <span class="result-chart__legend-item" tabindex="0">
+                                <span class="result-chart__swatch result-chart__swatch--safe"></span>
+                                <span>Safe</span>
+                                <span class="result-chart__tooltip">Posts where the scanner did not detect personal identifiable information.</span>
+                            </span>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="scanner-results__table-wrap" aria-labelledby="scanner-results-table-title">
+                    <h2 class="scanner-results__table-title" id="scanner-results-table-title">Flagged Posts</h2>
+                    <table class="scanner-results__table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Post Content</th>
+                                <th scope="col">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>21-03-2019</td>
+                                <td>Founder Break-Even Calculator</td>
+                                <td><span class="risk-badge risk-badge--level-one">Address</span></td>
+                            </tr>
+                            <tr>
+                                <td>21-03-2019</td>
+                                <td>Found this old birthday post from my school friends.</td>
+                                <td><span class="risk-badge risk-badge--level-two">School</span></td>
+                            </tr>
+                            <tr>
+                                <td>18-04-2020</td>
+                                <td>Finally moved into the Cardiff flat near the station.</td>
+                                <td><span class="risk-badge risk-badge--level-one">Location</span></td>
+                            </tr>
+                            <tr>
+                                <td>02-09-2021</td>
+                                <td>Call me on the old number if the group chat breaks again.</td>
+                                <td><span class="risk-badge risk-badge--level-one">Phone</span></td>
+                            </tr>
+                            <tr>
+                                <td>14-01-2022</td>
+                                <td>My first pet Max still has the best password inspiration.</td>
+                                <td><span class="risk-badge risk-badge--level-two">Pet Name</span></td>
+                            </tr>
+                            <tr>
+                                <td>30-08-2023</td>
+                                <td>Thanks for the birthday messages, 29 feels strange.</td>
+                                <td><span class="risk-badge risk-badge--level-two">Age</span></td>
+                            </tr>
+                            <tr>
+                                <td>11-12-2024</td>
+                                <td>Nothing personal here, just a sunset photo.</td>
+                                <td><span class="risk-badge risk-badge--safe">Safe</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer" id="contact-us">
+            <div class="site-footer__backdrop"></div>
+            <div class="site-footer__panel">
+                <div class="site-footer__grid">
+                    <div class="site-footer__brand">
+                        <a class="site-footer__brand-link" href="#home">
+                            <img class="site-footer__logo" src="assets/footer-logo-placeholder.png" alt="A spider silhouette with a keyhole in its center">
+                            <span class="site-footer__brand-text">Social<br>Spiders</span>
+                        </a>
+                        <p class="site-footer__tagline">Where social privacy meets security</p>
+
+                        <div class="site-footer__socials" aria-label="Social links">
+                            <a href="#linkedin" aria-label="LinkedIn">
+                                <img src="assets/icon-linkedin.png" alt="LinkedIn icon" aria-hidden="true">
+                            </a>
+                            <a href="#instagram" aria-label="Instagram">
+                                <img src="assets/icon-instagram.png" alt="Instagram icon" aria-hidden="true">
+                            </a>
+                            <a href="#facebook" aria-label="Facebook">
+                                <img src="assets/icon-facebook.png" alt="Facebook icon" aria-hidden="true">
+                            </a>
+                            <a href="#twitter" aria-label="X (formally Twitter)">
+                                <img src="assets/icon-x.png" alt="X, formerly Twitter, icon" aria-hidden="true">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__heading">Our Services</h2>
+                        <ul class="site-footer__list">
+                            <li><a href="#financial-security">Financial Security</a></li>
+                            <li><a href="#pii-scanner">Social Media Scanner</a></li>
+                            <li><a href="#personal-security">Personal Security</a></li>
+                            <li><a href="#data-security">Data Security</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__heading">Page</h2>
+                        <ul class="site-footer__list">
+                            <li><a href="#about-us">About Us</a></li>
+                            <li><a href="#our-team">Our Team</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#our-blog">Our Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__heading">Contact Us</h2>
+                        <ul class="site-footer__contact-list">
+                            <li>
+                                <img src="assets/icon-phone.png" alt="Phone number icon" aria-hidden="true">
+                                <span>+44 1929 2102</span>
+                            </li>
+                            <li>
+                                <img src="assets/icon-email.png" alt="Email address icon" aria-hidden="true">
+                                <span>info@socialspiders.co.uk</span>
+                            </li>
+                            <li>
+                                <img src="assets/icon-location.png" alt="Location pin icon" aria-hidden="true">
+                                <span>Cardiff, Wales, UK</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__heading">Links</h2>
+                        <ul class="site-footer__list">
+                            <li><a href="#terms">Term Of Use</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="site-footer__divider"></div>
+                <p class="site-footer__copyright">copyright social spiders @2026 all right reserved</p>
+            </div>
+        </footer>
+    </main>
+    <script src="logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* order scan buttons and container*/
+.order-scan {
+    padding-top: 370px;
+    padding-bottom: 300px;
+    background-image: url("assets/patten.webp");
+    width: 100%;
+    overflow: hidden;
+}
+
+/* error message container*/
+.error-message {
+    background-color: #f86f60;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.error {
+    padding: 12px;
+}
+
+/* style inputs and link buttons*/
+.btn {
+    width:500px;
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 5px 0;
+    display: inline-block;
+    font-size: 22px;
+    line-height: 30px;
+    text-decoration: none;
+    border: 2px solid white;
+}
+
+/* Two-column layout */
+.col {
+    align-items: center;
+    width: 1005px;
+    margin: auto;
+    margin-top: 6px;
+}
+
+/* addapts button layout to ne column if page smaller than 110px accross */
+@media only screen and (max-width: 110px){
+    .btn { 
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .col { 
+        width: 100%;
+    }
+}
+
+/* add appropriate colors to fb, Twitter, and google buttons */
+.fb {
+    background-color: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background-color: #55ACEE;
+    color: white;
+}
+
+.instagram {
+    background-color: #3f729b;
+    color: white;
+}
+
+.dummy {
+    background-color: #cb2027;
+    color: white;
+}
+
+.fb:hover {
+    background-color: #23345a;
+}
+
+.twitter:hover {
+    background-color: #1583d7;
+}
+
+.instagram:hover {
+    background-color: #26455d;
+}
+
+.dummy:hover {
+    background-color: #801419;
+}
+
+/* explanitory text */
+.text {
+    width: 50%;
+    margin: 0 25%;
+    padding: 15px;
+    font-size:  22px;
+    text-align: center;
+    background-color: white;
+}
