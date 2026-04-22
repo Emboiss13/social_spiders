@@ -1,4 +1,4 @@
-# Social Spiders
+# 🕷️ Social Spiders
 
 Widespread adoption of social media among the younger generation has created an environment where users share a large amount of their life online. 
 
@@ -8,29 +8,28 @@ Social Spiders is an accessible web application that uses social media APIs to g
 
 <img width="1511" height="901" alt="Screenshot 2026-04-20 at 11 41 05" src="https://github.com/user-attachments/assets/4864ade1-b612-4166-8a01-fed8680d9963" />
 
+<br>
+<br>
 
 ## Contributors
 
-Giuliana Emberson
+#### Giuliana Emberson
 - Branding (logo)
-- UX/UI figma prototyping 
+- UX/UI [Figma light and dark mode Prototypes](https://www.figma.com/design/OXL91Mlxzjwr6hEDrz8m5M/Social-Spiders?node-id=29-347&t=cxeVtbtDtA2j5mmW-1) prototyping 
 - Frontend web development & testing (files in JS, CSS and HTML)
 - Documentation
 
-Matthew Purvis
+#### Matthew Purvis
 - Initial project concept and code
 - Integration engineering
 - Environment setup and maintenance
 - API interactions
 
-
-## Frontend Development
-
-We started the frontend dev cycle by making a prototype of the website on figma: [link](https://www.figma.com/design/OXL91Mlxzjwr6hEDrz8m5M/Social-Spiders?node-id=29-347&t=cxeVtbtDtA2j5mmW-1)
+<br>
+<br>
 
 
 ## Backend Setup Instructions
-
 
 ### 1️⃣ Linux
 
@@ -58,9 +57,7 @@ To set up Social Spiders on Linux:
 
 
 ### 2️⃣ macOS
-
 To set up Social Spiders on macOS using Homebrew (open your mac terminal or the VSCode built in terminal):
-
 1. Install [Homebrew](https://brew.sh/) (if not installed):
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -81,7 +78,6 @@ To set up Social Spiders on macOS using Homebrew (open your mac terminal or the 
         Make sure the following are **enabled** by removing the `#` which is commenting them out: 
         - `LoadModule proxy_module lib/httpd/modules/mod_proxy.so`
         - `LoadModule proxy_fcgi_module lib/httpd/modules/mod_proxy_fcgi.so`
-
     - **STEP 3**: Right after the last `LoadModule` line add the following:
         ```bash
         <FilesMatch \.php$>
@@ -101,10 +97,6 @@ To set up Social Spiders on macOS using Homebrew (open your mac terminal or the 
     ```bash
     composer update
     ```
-    
-
-
-
 7. Deploy the app files and Composer `vendor/` directory to `DocumentRoot`:
     ```bash
     cp -r src/* /opt/homebrew/var/www/
@@ -112,13 +104,13 @@ To set up Social Spiders on macOS using Homebrew (open your mac terminal or the 
     ```
 8. Test the setup by either:
     - Opening the browser on `http://127.0.0.1:8080/`
-    - Create `info.php` in `DocumentRoot` with `<?php phpinfo(); ?>` and visit it to verify PHP is running the server
+    - Create `info.php` in `DocumentRoot` with `<?php phpinfo(); ?>` and visit it to verify PHP is running on the server
+      
 <br>
 
 ---
 
-#### 😵 macOS Troubleshooting
-
+#### ❌ macOS Troubleshooting
 If you get this error: 
 
 ```bash
@@ -146,7 +138,7 @@ rm -f /opt/homebrew/var/run/httpd*.pid
 
 ## Dependencies
 
-- pip install gliner
+- `pip install gliner`
 
 #### Web dependencies:
 - httpd (apache2)
@@ -165,7 +157,12 @@ $ python3 -m venv venv
 $ pip install gliner transformers
 ```
 
+<br>
+
+
 ---
 ---
 
-Original git env: [link](https://git.cardiff.ac.uk/c22005835/social-spiders)
+<br>
+
+Original git env for commit history: [link](https://git.cardiff.ac.uk/c22005835/social-spiders)
