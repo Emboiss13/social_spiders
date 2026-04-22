@@ -17,6 +17,12 @@ Giuliana Emberson
 - Frontend web development & testing (files in JS, CSS and HTML)
 - Documentation
 
+Matthew Purvis
+- Initial project concept and code
+- Integration engineering
+- Environment setup and maintenance
+- API interactions
+
 
 ## Frontend Development
 
