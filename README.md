@@ -1,4 +1,4 @@
-# Social Spiders
+# 🕷️ Social Spiders
 
 Widespread adoption of social media among the younger generation has created an environment where users share a large amount of their life online. 
 
@@ -102,7 +102,7 @@ To set up Social Spiders on macOS using Homebrew (open your mac terminal or the 
 
 ---
 
-#### 😵 macOS Troubleshooting
+#### ❌ macOS Troubleshooting
 
 If you get this error: 
 
