@@ -9,6 +9,21 @@ Social Spiders is an accessible web application that uses social media APIs to g
 <img width="1511" height="901" alt="Screenshot 2026-04-20 at 11 41 05" src="https://github.com/user-attachments/assets/4864ade1-b612-4166-8a01-fed8680d9963" />
 
 
+## Contributors
+
+Giuliana Emberson
+- Branding (logo)
+- UX/UI figma prototyping 
+- Frontend web development & testing (files in JS, CSS and HTML)
+- Documentation
+
+Matthew Purvis
+- Initial project concept and code
+- Integration engineering
+- Environment setup and maintenance
+- API interactions
+
+
 ## Frontend Development
 
 We started the frontend dev cycle by making a prototype of the website on figma: [link](https://www.figma.com/design/OXL91Mlxzjwr6hEDrz8m5M/Social-Spiders?node-id=29-347&t=cxeVtbtDtA2j5mmW-1)
