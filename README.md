@@ -17,7 +17,7 @@ Social Spiders is an accessible web application that uses social media APIs to g
 - Branding (logo)
 - UX/UI [Figma light and dark mode Prototypes](https://www.figma.com/design/OXL91Mlxzjwr6hEDrz8m5M/Social-Spiders?node-id=29-347&t=cxeVtbtDtA2j5mmW-1) prototyping 
 - Frontend web development & testing (files in JS, CSS and HTML)
-- Documentation
+- Refactored error handling to use browser alerts instead of custom pop-up logic
 
 #### Matthew Purvis
 - Initial project concept and code
